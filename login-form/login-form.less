@@ -1,0 +1,57 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: sans-serif;
+  height: 70dvh;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  width: 400px;
+}
+
+label {
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  font-size: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #005cc5;
+}
+
+button {
+  font-size: 1rem;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #009485;
+  color: whitesmoke;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #005cc5;
+}
+
+.error-list p {
+  font-size: 0.9rem;
+  color: darkorange;
+  font-style: italic;
+  margin: 0;
+  margin-left: 5px;
+  margin-top: -5px;
+}

@@ -1,0 +1,33 @@
+<div class="container">
+  <h2>Login to your account</h2>
+
+  <form novalidate (submit)="onSubmit($event)">
+    <label>
+      Email
+      <input type="email" [formField]="loginForm.email" placeholder="user@example.com" />
+    </label>
+    @if (loginForm.email().touched() && loginForm.email().invalid()) {
+      <div class="error-list">
+        @for (error of loginForm.email().errors(); track error) {
+          <p>{{ error.message }}</p>
+        }
+      </div>
+    }
+
+    <label>
+      Password
+      <input type="password" [formField]="loginForm.password" placeholder="type password" />
+    </label>
+    @if (loginForm.password().touched() && loginForm.password().invalid()) {
+      <div class="error-list">
+        @for (error of loginForm.password().errors(); track error) {
+          <p>
+            {{ error.message }}
+          </p>
+        }
+      </div>
+    }
+
+    <button type="submit">Log In</button>
+  </form>
+</div>
